@@ -1,20 +1,22 @@
+import { Product } from "../../data/products";
 import * as S from "./styles";
 import { FiShoppingCart } from "react-icons/fi";
 
-export const ProductCard: React.FC = () => {
+interface ProductCardProps {
+  product: Product;
+}
+
+export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <S.Card>
-      <S.ProductImage
-        src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-        alt=""
-      />
+      <S.ProductImage src={product.image} alt={product.description} />
 
-      <S.ProductTitle>Mens Camisa Social Black Box</S.ProductTitle>
+      <S.ProductTitle>{product.title}</S.ProductTitle>
 
       <S.ReviewPriceContainer>
-        <S.Review>4.1</S.Review>
+        <S.Review>({product.rating.rate})</S.Review>
 
-        <S.Price>$32.00</S.Price>
+        <S.Price>${product.price} </S.Price>
       </S.ReviewPriceContainer>
 
       <S.AddToCartButtonWrapper>
