@@ -21,7 +21,9 @@ export const ProductImage = styled.img`
 export const ProductTitle = styled.h2`
   font-weight: 500;
   font-size: 1.2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+
+  min-height: 3rem;
 `;
 
 export const ReviewPriceContainer = styled.div`
@@ -33,7 +35,15 @@ export const ReviewPriceContainer = styled.div`
   margin-top: 1rem;
 `;
 
-export const Review = styled.span``;
+export const Review = styled.span`
+  display: flex;
+
+  font-size: 0.8rem;
+
+  svg {
+    font-size: 1rem;
+  }
+`;
 
 export const Price = styled.strong``;
 
