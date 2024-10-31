@@ -1,18 +1,18 @@
 import React from "react";
-import styled from "styled-components";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import { Header } from "./Components/Header/Header";
-import { ProductCard } from "./Components/ProductCard/ProductCard";
 import { ProductList } from "./Components/ProductList/ProductList";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <Header />
 
       <ProductList />
       <GlobalStyles />
-    </>
+    </Provider>
   );
 }
 

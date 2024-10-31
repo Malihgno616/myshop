@@ -16,5 +16,14 @@ export const GlobalStyles = createGlobalStyle`
     
   }
 
+  button {
+    cursor: pointer;
+    transition: filter .5s;
+
+    &:hover {
+      filter: brightness(1.1);
+      transition: filter .5s;
+    }
+  }
 
 `;
