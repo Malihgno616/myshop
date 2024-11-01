@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootReducer } from "../../redux/root-reducer";
 
 import * as S from "./styles";
+import { login, logout } from "../../redux/User/user-slice";
 
 export const Header: React.FC = () => {
   const { user } = useSelector(
@@ -20,18 +21,15 @@ export const Header: React.FC = () => {
     // usuário não está logado
     if (user === null) {
       // despachar a action de login
-      dispatch({
-        type: "user/login",
-        payload: {
-          name: "Ackin lino",
+      dispatch(
+        login({
+          name: "Ackin Lino",
           email: "ackin@email.com",
-        },
-      });
+        })
+      );
     } else {
       // usuário está logado
-      dispatch({
-        type: "user/logout",
-      });
+      dispatch(logout({}));
     }
   }
 
