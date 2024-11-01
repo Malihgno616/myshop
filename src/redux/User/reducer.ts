@@ -3,7 +3,7 @@ interface User {
   email: string;
 }
 
-interface UserState {
+export interface UserState {
   user: User | null;
 }
 const initialState: UserState = {

@@ -17,7 +17,36 @@ export const Container = styled.aside<ContainerProps>`
 
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25);
 
-  transition: right .5s ;
+  transition: right 0.5s;
+
+  overflow: scroll;
 `;
 
 export const Title = styled.h1``;
+
+export const CartProductsList = styled.ul`
+  padding: 2rem 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+`;
+
+export const CartProductItem = styled.li``;
+
+export const TotalCart = styled.strong``;
+
+export const RemoveProductFromCart = styled.button`
+  border: none;
+  background-color: lightcoral;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding: .1rem;
+  border-radius: 0.5rem;
+
+  &:hover {
+    filter: brightness(130%);
+  }
+`;
